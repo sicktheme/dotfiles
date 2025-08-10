@@ -1,0 +1,61 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "spacing": 4,
+  "modules-left": ["river/tags", "custom/launcher"],
+  "modules-center": ["clock"],
+  "modules-right": ["memory", "cpu", "pulseaudio", "network", "custom/koto", "tray"],
+  
+  "river/tags": {
+    "num-tags": 9,
+    "tag-labels": ["一", "二", "三", "四", "五", "六", "七", "八", "九"]
+  },
+  
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun"
+  },
+  
+  "memory": {
+    "format": " {used:0.1f}G",
+    "interval": 5,
+    "tooltip-format": "記憶: {used}G / {total}G"
+  },
+  
+  "cpu": {
+    "format": " {usage:02}%",
+    "interval": 3,
+    "on-click": "kitty btop"
+  },
+  
+  "pulseaudio": {
+    "format": "{icon} {volume}%・響",
+    "format-muted": " 無音",
+    "format-icons": ["", "", ""],
+    "on-click": "pamixer -t"
+  },
+  
+  "network": {
+    "format-wifi": " 風 {essid}",
+    "format-ethernet": " 土",
+    "format-disconnected": "⚠ 無ネット",
+    "tooltip-format": "{ifname}: {ipaddr}"
+  },
+  
+  "custom/koto": {
+    "exec": "~/.config/waybar/scripts/koto.sh",
+    "interval": 3600,
+    "format": "{}"
+  },
+  
+  "clock": {
+    "format": " {:%H:%M}・寂",
+    "tooltip-format": "今日は {:%A, %d %B}\n 一期一会",
+    "timezone": "Asia/Krasnoyarsk"
+  },
+  
+  "tray": {
+    "spacing": 8
+  }
+}

@@ -1,0 +1,47 @@
+#!/bin/sh
+
+#start river
+mod=Mod4
+riverctl spawn "kitty"
+riverctl spawn "swaybg -i ~/Downloads/japan.jpg -m fill"
+riverctl spawn "wlr-randr --output DP-3 --mode 3840x2160@144"
+riverctl spawn "wlr-randr --output DP-4 --mode 2560x1440@164.835007"
+
+riverctl mode "float"
+#riverctl float-filter-add "foot"
+
+#riverctl map normal $mod P exec "riverctl main-ratio -0.05"
+#riverctl map normal $mod O exec "riverctl main-ratio +0.05"
+#riverctl map normal $mod F exec "riverctl mode float"
+#riverctl map normal $mod G exec "riverctl mode tile"
+
+riverctl map normal Control Q focus-view next
+riverctl map normal Control E focus-view previous
+
+#riverctl send-layout-cmd wideriver "--layout left --stack dwindle --count 1 --ratio 0.5"
+
+#riverctl map normal $mod Shift Left move left 50
+#riverctl map normal $mod Shift Right move right 50
+#riverctl map normal $mod Shift Up move up 50
+#riverctl map normal $mod Shift Down move down 50
+
+#riverctl map normal $mod T focus-view left
+#riverctl map normal Super Y focus-view right
+
+#riverctl rule-add -app-id "kitty" -float -pos "50 50"
+
+riverctl map normal $mod Left resize horizontal -100
+riverctl map normal $mod Right resize horizontal +100
+riverctl map normal $mod Up resize vertical -100
+riverctl map normal $mod Down resize vertical +100
+
+riverctl map normal $mod q close #quit river
+riverctl map normal $mod e exit #close terminal
+riverctl map normal $mod Return spawn "kitty" #open terminal
+
+riverctl map normal $mod F1 exec "pamixer --increase 10"
+riverctl map normal $mod F2 exec "pamixer --decrease 5"
+riverctl map normal $mod F3 exec "pamixer --toogle-mute"
+
+waybar &
+

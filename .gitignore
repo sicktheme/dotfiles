@@ -1,0 +1,9 @@
+/fontforge/
+/go/
+/pulse/
+/systemd/
+/yay/
+QtProject.conf
+*.swp
+*.swo
+/lazy-lock.json
