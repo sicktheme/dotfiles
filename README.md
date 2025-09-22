@@ -1,7 +1,5 @@
 # 🌟 Arch Linux Dotfiles
 
-dotfiles/
-    .config/
 │   ├── river/         
 │   ├── waybar/         
 │   ├── kitty/          
