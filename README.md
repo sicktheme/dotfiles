@@ -1,4 +1,4 @@
-# 🌟 Arch Linux Dotfiles
+# 🌟 Arch Linux │ Dotfiles
 
 │   ├── river/         
 │   ├── waybar/         
