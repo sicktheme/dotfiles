@@ -1,7 +1,7 @@
 # 🌟 Arch Linux Dotfiles
 
 dotfiles/
-├── .config/
+    .config/
 │   ├── river/         
 │   ├── waybar/         
 │   ├── kitty/          
@@ -17,7 +17,6 @@ git clone https://github.com/sicktheme/dotfiles.git
 Плавной анимации и отзывчивого интерфейса
 =========================================
 
-Логи:
 River: journalctl -u river
 Waybar: waybar -l debug
 Kitty: kitty --debug-config
